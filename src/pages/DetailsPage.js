@@ -37,7 +37,7 @@ const DetailsPage = () => {
     }, []);
     
     return (
-        <>
+        <div className="flex-container">
             <div className="hero">
                 <div className="hero__details text--secondary">
                     <h2>{pokemonDetails.name}</h2>
@@ -50,13 +50,13 @@ const DetailsPage = () => {
                 </img>
             </div>
 
-            <div className="footer">
-                <a className="footer__link" href={pokemonDetails.prevId}>{`< PREV`}</a>
-                <a className="footer__link" href="/">HOME</a>
-                <a className="footer__link" href={pokemonDetails.nextId}>{`NEXT>`}</a>
+            <div className="nav">
+                <a className="nav__link" href={pokemonDetails.prevId}>{`PREV`}</a>
+                <a className="nav__link" href="/">HOME</a>
+                <a className="nav__link" href={pokemonDetails.nextId}>{`NEXT`}</a>
             </div>
 
-        </>
+        </div>
     )
 }
 
